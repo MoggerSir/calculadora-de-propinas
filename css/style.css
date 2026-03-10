@@ -1,0 +1,174 @@
+:root {
+
+  /* =========================
+     TIPOGRAFÍA
+  ========================= */
+
+  --font-title: "Playfair Display", serif;
+  --font-text: "Inter", sans-serif;
+
+
+  /* =========================
+     COLORES BASE
+     Paleta pistache + madera
+  ========================= */
+
+  --color-bg: #f6f8f5;
+  --color-surface: #ffffff;
+
+  --color-pistache-soft: #dfe8d5;
+  --color-pistache-suave: #c4e6acd3;
+  --color-pistache: #b9d3a6;
+  --color-pistache-strong: #8fb57c;
+
+  --color-wood-light: #d6b89c;
+  --color-wood: #b08968;
+  --color-wood-dark: #7f5539;
+
+  --color-text: #2f2f2f;
+  --color-text-soft: #6b6b6b;
+
+
+  /* =========================
+     CARDS
+  ========================= */
+
+  --card-bg: #ffffff;
+  --card-border: #e7ece3;
+  --card-shadow: 0 6px 18px rgba(0,0,0,0.06);
+
+
+  /* =========================
+     BOTONES
+  ========================= */
+
+  --btn-primary-bg: #8fb57c;
+  --btn-primary-hover: #7aa566;
+  --btn-primary-text: #ffffff;
+
+  --btn-secondary-bg: #b08968;
+  --btn-secondary-hover: #9c7253;
+  --btn-secondary-text: #ffffff;
+
+  --btn-soft-bg: #eef4ea;
+  --btn-soft-hover: #dfe8d5;
+  --btn-soft-text: #2f2f2f;
+
+
+  /* =========================
+     BORDES
+  ========================= */
+
+  --border-soft: 1px solid #e7ece3;
+  --border-radius: 12px;
+
+
+  /* =========================
+     SOMBRAS SUAVES
+  ========================= */
+
+  --shadow-soft: 0 4px 10px rgba(0,0,0,0.05);
+  --shadow-medium: 0 10px 25px rgba(0,0,0,0.08);
+  --shadow-hover: 0 12px 30px rgba(0,0,0,0.12);
+
+}
+
+/***********************
+  RESETEO BÁSICO
+***********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-text);
+  background-color: var(--color-pistache-strong);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+
+.contenedor {
+    background-color: var(--color-bg);
+    border-radius: var(--border-radius);
+    max-width: 1200px;
+    max-height: 1500px;
+    padding: 20px;
+    margin: 4em;
+    box-shadow: var(--shadow-medium);
+    transition: 1s ease-in-out;
+}
+
+.contenedor:hover {
+    box-shadow: var(--shadow-hover);
+    transform: scale(1.02);
+}
+
+.contenedor h1 {
+    font-family: var(--font-title);
+    color: var(--color-wood-dark);
+    background-color: var(--color-pistache-soft);
+    border-radius: var(--border-radius);
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow-soft);
+}
+
+.contenido {
+    background-color: var(--color-pistache-suave);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    height: 10em;
+    margin: 20px auto;
+}
+
+
+/* =========================
+     BOTONES
+  ========================= */
+
+  .boton {
+    background-color: var(--btn-primary-bg);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: var(--shadow-medium);
+  }
+
+  .boton:active {
+    background-color: var(--btn-soft-text);
+    color: var(--btn-primary-text);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+  }
+
+  /* =========================
+     inputs
+  ========================= */
+
+
+  .ContenedorInputs {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: row;
+    width: 90%;
+    margin: 20px auto;
+  }
+  .input {
+    padding: 10px;
+    border-radius: var(--border-radius);
+    border: var(--border-soft);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+    box-shadow: var(--shadow-soft);
+  }
