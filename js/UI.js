@@ -42,7 +42,7 @@ const CrearCart = () => {
                 [10, 12, 15, 18, 20].map(v => CrearElemento('option', { value: v, textContent: v + '%' }))
             )
         ]),
-        CrearElemento('button', { class: 'boton', id: 'calculateBtn', textContent: 'Calcular Propina' }),
+        CrearElemento('div', { class: 'boton', id: 'calculateBtn', textContent: 'Calcular Propina' }),
         CrearElemento('div', { id: 'result' })
     ];
 

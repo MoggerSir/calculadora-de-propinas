@@ -99,6 +99,9 @@ body {
     margin: 4em;
     box-shadow: var(--shadow-medium);
     transition: 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contenedor:hover {
@@ -112,6 +115,8 @@ body {
     background-color: var(--color-pistache-soft);
     border-radius: var(--border-radius);
     text-align: center;
+    min-width: 15em;
+    max-width: 17em;
     margin-bottom: 20px;
     box-shadow: var(--shadow-soft);
 }
@@ -172,3 +177,13 @@ body {
     margin-left: 20px;
     box-shadow: var(--shadow-soft);
   }
+
+/****************
+tikest de pago
+*****************/
+
+.ticket{
+   background-color: var(--color-pistache-suave);
+   margin: 5px;
+   text-align: center;
+}
