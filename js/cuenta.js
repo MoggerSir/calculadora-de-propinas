@@ -1,7 +1,24 @@
 
-const cantidadAPagar = Math.floor(Math.random() * 30000);
-
 document.addEventListener('DOMContentLoaded', () => {
+
+const ticket = document.querySelectorAll('.cuenta');
+console.log(ticket)
+
+const cantidadAPagar = () => {
+    let total = 0;
+    ticket.forEach((dom) => {
+    // Usamos una expresión regular para quedarnos solo con los números
+    // .match(/\d+/) busca el primer grupo de números que encuentre
+    let soloNumeros = dom.textContent.match(/\d+/); 
+    
+    if (soloNumeros) {
+        total += parseInt(soloNumeros[0]);
+    }
+});
+
+    return total
+}
+
     // 1. Buscamos los elementos una vez que el DOM está listo
     // (Asegurándonos de que UI.js ya los creó)
     const btn = document.querySelector('#calculateBtn');
@@ -10,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultado = document.querySelector('#result');
 
     if (input) {
-        input.value = cantidadAPagar;
+        input.value = cantidadAPagar();
         input.disabled = true;
     }
 
@@ -32,8 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 resultado.innerHTML = `
                     <p class='ticket'><strong>Propina:</strong> $${propina.toLocaleString()}</p>
                     <p class='ticket'><strong>Total con propina:</strong> $${total.toLocaleString()}</p>
-                    <p class='ticket'><strong>Gracias por su visita :)</strong></p>
-                `;
+                    <p class='ticket'><strong>Gracias por su visita :)</strong></p>`;
+                document.querySelectorAll('.ticket').forEach((tik)=>{tik.style.display = 'inline'})
             }
         });
     }

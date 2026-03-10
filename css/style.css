@@ -10,7 +10,6 @@
 
   /* =========================
      COLORES BASE
-     Paleta pistache + madera
   ========================= */
 
   --color-bg: #f6f8f5;
@@ -87,14 +86,16 @@ body {
   background-color: var(--color-pistache-strong);
   color: var(--color-text);
   line-height: 1.6;
+  display: flex;
+  justify-content: center;
 }
 
 
 .contenedor {
     background-color: var(--color-bg);
     border-radius: var(--border-radius);
-    max-width: 1200px;
-    max-height: 1500px;
+    max-width: 700px;
+    height: auto;
     padding: 20px;
     margin: 4em;
     box-shadow: var(--shadow-medium);
@@ -123,13 +124,12 @@ body {
 
 .contenido {
     background-color: var(--color-pistache-suave);
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    gap: 5px;
     width: 90%;
-    height: 10em;
+    max-height: 100em;
     margin: 20px auto;
 }
 
@@ -186,4 +186,17 @@ tikest de pago
    background-color: var(--color-pistache-suave);
    margin: 5px;
    text-align: center;
+   display: none;
+   display: none;
 }
+
+/* =========================
+     cuenta
+  ========================= */
+
+  .cuenta {
+    text-align: center;
+    border-bottom: solid 1px var(--color-pistache-strong);
+    font-family: var(--font-title);
+  }
+
