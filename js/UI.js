@@ -57,7 +57,7 @@ const CrearCart = () => {
             CrearElemento('br'),
             CrearElemento('label', { for: 'tipPercentage', textContent: 'Porcentaje de propina:' }),
             CrearElemento('select', { class: 'input', id: 'tipPercentage' }, 
-                [10, 12, 15, 18, 20].map(v => CrearElemento('option', { value: v, textContent: v + '%' }))
+                [1, 5 ,10, 12, 15, 18, 20].map(v => CrearElemento('option', { value: v, textContent: v + '%' }))
             )
         ]),
         CrearElemento('div', { class: 'boton', id: 'calculateBtn', textContent: 'Calcular Propina' }),
